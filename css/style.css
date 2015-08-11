@@ -17,8 +17,8 @@ header{
 	background:url(../img/header_bg.png);
 }
 .headerCon{
-	max-width:1000px;
 	height:210px;
+	max-width: 1000px;
 	margin:auto;
 	position:relative;
 }
@@ -252,7 +252,7 @@ header{
 	margin:auto;
 	height:28px;
 	line-height:28px;
-	width:415px;
+	max-width:415px;
 }
 .footer li{
 	float:left;
@@ -450,6 +450,7 @@ header{
 	.logo {left: 22%;}
 }
 @media screen and (max-width: 434px){
+	.bottom span{display: none;}
 	.logo {left: 14%;}
 	.ntfIco {left: 43%;}
 	.lang {left: 29%;}

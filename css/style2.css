@@ -1056,10 +1056,10 @@ a.at300b .at4-icon, a.at300m .at4-icon {
 	}
 	.gamename {
 		margin: 0;
-		width: 50%;
+		width: 100%;
 	}
 	.gamesTI {
-		padding: 5%;
+		padding: 0 10%;
 	}
 }
 
