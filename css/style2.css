@@ -21,7 +21,6 @@ time, mark, audio, video {
 	padding: 0;
 	border: 0;
 	font-size: 100%;
-	font: inherit;
 	vertical-align: baseline;
 }
 
@@ -677,11 +676,17 @@ a.at300b .at4-icon, a.at300m .at4-icon {
 	height: auto;
 	overflow: hidden;
 }
-#left {
-	float: left;
+#left_col{
+	display: inline-block;
+	vertical-align: top;
 }
-#right {
-	float: right;
+#right_col{
+	display: inline-block;
+	vertical-align: top;
+}
+.game{
+	max-width: 1035px;
+	margin: 0 auto;
 }
 .imgSide {
 	height: auto;
@@ -736,20 +741,20 @@ a.at300b .at4-icon, a.at300m .at4-icon {
 	display: block;
 }
 .Center {
-	width: 830px;
+	display: inline-block;
+	max-width: 830px;
 	border-radius: 10px;
 	margin: 0px auto 20px;
-	float: left;
 }
 .Center_main {
-	width: 100%;
+	max-width: 100%;
 	margin: auto;
 	border-radius: 16px;
 	background: rgb(16, 33, 110) none repeat scroll 0% 0%;
 	box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.6);
 }
 .biaoti {
-	width: 800px;
+	max-width: 800px;
 	height: 75px;
 	margin: auto;
 	position: relative;
@@ -841,7 +846,7 @@ a.at300b .at4-icon, a.at300m .at4-icon {
 	visibility: hidden;
 }
 .play {
-	width: 800px;
+	max-width: 800px;
 	height: 600px;
 	overflow: hidden;
 	margin: auto;
@@ -860,7 +865,7 @@ a.at300b .at4-icon, a.at300m .at4-icon {
 	margin: auto;
 }
 .des {
-	width: 800px;
+	max-width: 800px;
 	margin: auto auto 20px;
 }
 .des > p {
@@ -962,7 +967,7 @@ a.at300b .at4-icon, a.at300m .at4-icon {
 	display: block;
 }
 .comments {
-	width: 100%;
+	max-width: 100%;
 	margin: 40px auto 0px;
 	background: rgb(16, 33, 110) none repeat scroll 0% 0%;
 	box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.6);
@@ -972,7 +977,7 @@ a.at300b .at4-icon, a.at300m .at4-icon {
 	overflow: hidden;
 }
 .comTitle {
-	width: 800px;
+	max-width: 800px;
 	border-bottom: 1px solid rgb(85, 85, 85);
 	height: 39px;
 	margin: auto;
@@ -989,7 +994,7 @@ a.at300b .at4-icon, a.at300m .at4-icon {
 	font-size: 20px;
 }
 .ComconBg {
-	width: 800px;
+	max-width: 800px;
 	margin: auto;
 	background: rgb(16, 33, 110) none repeat scroll 0% 0%;
 }
@@ -1042,6 +1047,11 @@ a.at300b .at4-icon, a.at300m .at4-icon {
 	.Descript {
 		width: 100%;
 	}
+}
+@media screen and (max-width: 1002px) {
+	.left_slide, .right_slide{display: none;}
+	.game{text-align: center; padding: 0 10px;}
+	.des{text-align: left;}
 }
 
 @media screen and (max-width: 640px) {
