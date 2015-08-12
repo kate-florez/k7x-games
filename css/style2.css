@@ -1089,6 +1089,29 @@ a.at300b .at4-icon, a.at300m .at4-icon {
 	.des{text-align: left;}
 }
 
+@media screen and (max-width: 768px) {
+	.navbar-fixed-bottom,.navbar-fixed-top{
+		position: fixed;
+	 	right: 0;
+	  	left: 0;
+	  	z-index: 1030;
+	}
+	.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+		background-color: #041A28;
+		opacity: 0.7;
+	}
+	.collapse.in {
+		overflow-y: hidden !important;
+	}
+	.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+		padding: 5%;
+  		margin: 5%;
+	}
+	.catOne>li {
+		height: 37px;
+	}
+}
+
 @media screen and (max-width: 640px) {
 	.contentTopL, .contentTopR {
 		width: 100%;
