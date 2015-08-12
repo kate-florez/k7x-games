@@ -9,7 +9,7 @@
 a{text-decoration:none;}
 li{list-style:none;}
 body{
-	background:#004775;
+	background:#004775 !important;
 	width:100%
 }
 header{

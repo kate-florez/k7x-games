@@ -45,7 +45,42 @@ li {
 	list-style: outside none none;
 }
 
+.navbar-toggle .icon-bar:nth-of-type(2) {
+	  top: 1px;
+}
 
+.navbar-toggle .icon-bar:nth-of-type(3) {
+  	top: 2px;
+}
+
+.navbar-toggle .icon-bar {
+	  position: relative;
+	  transition: all 500ms ease-in-out;
+}
+
+.navbar-toggle.active .icon-bar:nth-of-type(1) {
+	  top: 6px;
+	  transform: rotate(45deg);
+}
+
+.navbar-toggle.active .icon-bar:nth-of-type(2) {
+	  background-color: transparent;
+}
+
+.navbar-toggle.active .icon-bar:nth-of-type(3) {
+	  top: -6px;
+	  transform: rotate(-45deg);
+}
+.navbar-fixed-bottom, .navbar-fixed-top, .navbar-static-top {
+	  background: inherit !important;
+}
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.open>a {
+	 background: inherit !important;
+	 box-shadow: none !important;
+}
+.navbar-inverse {
+	border: none !important;
+}
 
 #main {
 	margin-top: -80px;
