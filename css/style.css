@@ -242,11 +242,11 @@ header{
 	width:100%;
 	text-align:center;
 	background-color:#335;
-	height:28px;
+	height:45px;
 	z-index:200;
 	clear:both;
 	color:#FFF;
-	position:relative;
+	position:fixed;
 }
 .footer{
 	margin:auto;
@@ -325,7 +325,7 @@ header{
 #cont a{color:#1e1e1e;}
 #container{
 	position:relative;
-	margin:15px auto
+	margin:15px auto 10%;
 }
 .game-item{float:left;}
 .game-item .icon{
@@ -409,13 +409,31 @@ header{
 	display:none; 
 }
 
-
+@media screen and (max-width: 1125px){
+	.headerCon {
+		height: 180px;
+	}
+}
+@media screen and (max-width: 878px){
+	.headerCon {
+		height: 180px;
+	}
+}
 @media screen and (min-width: 768px) {
 	.navbar-nav>li>a {
 		padding-bottom: 5px !important;
 	}
-}
+	.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+		background-color: inherit !important;
+	}
 
+}
+@media screen and (max-width: 768px) {
+	.catTwo {
+		position: initial;
+	}
+
+}
 
 @media screen and (max-width: 865px){
 	.cat{top: 125px;}
@@ -426,24 +444,24 @@ header{
 @media screen and (max-width: 730px){
 	.cat{
 		display: block;
-    	width: 100%;
-    	text-align: center;
-    	top: 175px;
-    }
-    .catTwo{
+		width: 100%;
+		text-align: center;
+		top: 175px;
+	}
+	.catTwo{
 		display: block;
-    	width: 100%;
-    	top: 60px;
-    }
-    header{margin: 0 0 75px 0}
-    .logo{left: 30%;}
-    .ntfIco{
-    	right: 80px;
-    	top: 112px;
-    }
-    .lang, .search{top: 125px;}
-    .lang{right: 185px;}
-    .search{right: 379px;}
+		width: 100%;
+		top: 60px;
+	}
+	header{margin: 0 0 75px 0}
+	.logo{left: 30%;}
+	.ntfIco{
+		right: 80px;
+		top: 112px;
+	}
+	.lang, .search{top: 125px;}
+	.lang{right: 185px;}
+	.search{right: 379px;}
 }	
 @media screen and (max-width: 579px){
 	.search{left: 38%;}
@@ -452,11 +470,12 @@ header{
 		left: 39%;
 	}
 	.ntfIco {
-    	left: 49%;
-    	top: 202px;
+		left: 49%;
+		top: 61%;
 	}
 	.cat{top: 265px;}
 	header {margin: 0 0 165px 0;}
+
 }	
 @media screen and (max-width: 494px){
 	.logo {left: 22%;}
