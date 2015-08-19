@@ -405,6 +405,18 @@ header{
 	margin:auto;
 }
 
+.infscr-loading, .error-loading, .end-loading {
+	display:none; 
+}
+
+
+@media screen and (min-width: 768px) {
+	.navbar-nav>li>a {
+		padding-bottom: 5px !important;
+	}
+}
+
+
 @media screen and (max-width: 865px){
 	.cat{top: 125px;}
 	.ntfIco{top: 35px;}
