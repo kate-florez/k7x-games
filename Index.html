@@ -257,5 +257,21 @@
 
 
 
+				<script>
+					//big img small img
+					function bigSmaimg(){
+						var synchysis=$('#container').synchysis({element:".game-item",width:145,height:145,particular:{"big":[2,2]}});
+						$(window).resize(function(){synchysis.init();});
+					}
+					function resetWidth(){
+						$('#container').width(Math.floor($("#main").width()/ 145) * 145); 
+					}
+					$(window).resize(function() {
+						resetWidth();
+					});
+				</script>
+
+
+
 </body>
 </html>

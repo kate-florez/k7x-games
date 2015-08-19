@@ -168,17 +168,47 @@ function colse_pop(){
 					}
 				}
 			}
-			//big img small img
-			function bigSmaimg(){
-				var synchysis=$('#container').synchysis({element:".game-item",width:145,height:145,particular:{"big":[2,2]}});
-				$(window).resize(function(){synchysis.init();});
+			function showloading(result) {
+				$("#infscr-loading").stop(true, true).hide();
+				$("#error-loading").stop(true, true).hide();
+				$("#end-loading").stop(true, true).hide();
+				if (result == undefined) result = 'infscr';
+				$('#' + result + "-loading").fadeIn();
+				$('#' + result + "-loading").fadeOut(3000);
 			}
-			function resetWidth(){
-				$('#container').width(Math.floor($("#main").width()/ 145) * 145); 
+
+			function resizeInit() {
+				var nextNum = parseInt($("#page_nav").val());;
+				var w_heigth = $(window).height();
+				var d_heigth = $(document).height();
+				while (d_heigth <= w_heigth && nextNum < total && error_falg === false) {
+					ajax_pinterest(false);
+					beforeNum = nextNum;
+					nextNum = parseInt($("#page_nav").val());
+					if (beforeNum == nextNum) break;
+				}
 			}
-			$(window).resize(function() {
-				resetWidth();
-			});
+			
+
+					// 			var isopen = getcookie('isOpen');
+					// $(function(){
+					// 	changeHref();
+					// });
+					// function changeHref() {
+					// 	if (isopen == 1) {
+					// 		$('.changeUrl').each(function (n) {
+					// 			$(this).attr('href',$(this).attr('href').replace(/game/,"detail"));
+					// 		});
+					// 		$('.changeCon').html($('.changeUrl').html().replace(/game/,"detail"));
+					// 	}else{
+					// 		$('.changeUrl').each(function (n) {
+					// 			$(this).attr('href',$(this).attr('href').replace(/detail/,"game"));
+					// 		});
+					// 		$('.changeCon').html($('.changeUrl').html().replace(/detail/,"game"));
+					// 	}
+					// }
+
+
 			//menu
 			$(document).ready(function () {
 				$(".navbar-toggle").on("click", function () {
